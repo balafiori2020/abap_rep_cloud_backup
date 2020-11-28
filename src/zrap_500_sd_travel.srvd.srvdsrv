@@ -1,0 +1,10 @@
+@EndUserText.label: 'Travel Service Definition'
+define service ZRAP_500_SD_TRAVEL {
+  expose ZTEST_PROJECTION_TRAVEL as Travel;
+  expose ZTEST_PROJETION_BOOKING as Booking;
+  expose ZRAP_500_I_AGENCYT as Agency;
+  expose ZRAP_500_I_CUSTOMERT as Customer;
+  expose ZRAP_500_I_AIRLINE as Airline;
+  expose ZRAP_500_I_FLIGHT as Flight;
+  expose I_Currency as Currency;
+}
