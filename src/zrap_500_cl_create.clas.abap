@@ -13,14 +13,9 @@ ENDCLASS.
 
 
 
-CLASS zrap_500_cl_create IMPLEMENTATION.
+CLASS ZRAP_500_CL_CREATE IMPLEMENTATION.
 
 
-  METHOD if_oo_adt_classrun~main.
-
-    me->fill_master_data( ).
-
-  ENDMETHOD.
   METHOD fill_master_data.
 
 
@@ -45,7 +40,7 @@ CLASS zrap_500_cl_create IMPLEMENTATION.
 *     data:lt_customer type TABLE of zrap_500_t_cust.
 *
 *  APPEND VALUE #(
-*  customer_id = 'C001'
+*  customer_id = '2'
 *  first_name = 'Bala'
 *  last_name  = 'Subramaniyam'
 *city = 'Bangalore'
@@ -177,12 +172,9 @@ flight_price = 3900
   ENDMETHOD.
 
 
+  METHOD if_oo_adt_classrun~main.
 
+    me->fill_master_data( ).
 
-
-
-
-
-
-
+  ENDMETHOD.
 ENDCLASS.

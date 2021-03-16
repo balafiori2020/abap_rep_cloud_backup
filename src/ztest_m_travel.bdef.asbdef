@@ -1,4 +1,4 @@
-managed; // implementation in class zbp_test_m_travel unique;
+managed implementation in class zbp_test_m_travel unique;
 
 define behavior for ZTEST_M_TRAVEL //alias <alias_name>
 persistent table ZRAP_500_T_TRAVE
@@ -10,6 +10,9 @@ lock master
   update;
   delete;
   association _Bookings { create; }
+
+  validation ValidateCustomer on save { field Customer_Id;  }
+//  determination ValidateCustomer on save { field Customer_Id;create;}
 }
 
 define behavior for ZRAP_500_M_BOOKING //alias <alias_name>
